@@ -1,1 +1,21 @@
+pipeline {
+        agent any
+		stages {
+                   stage('checkout'){
+                      steps {
+	 		git 'https://github.com/naveesha7777/petclinic.git'
+                      	}
+		}
+                stage('build') {
+                  steps {
+                       sh 'mvn clean package'
+		}
+	}
+		
+        
+		
+	
+
+	}
+}
 
