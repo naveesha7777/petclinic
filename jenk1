@@ -16,7 +16,11 @@ pipeline {
                        archiveArtifacts artifacts: 'target/*.?ar', followSymlinks: false
 		}
 	}
-        
+   		stage('archive') {
+                  steps {
+                     junit 'target/surefire-reports/*.xml'
+		     }
+		     }
 		
 	
 
